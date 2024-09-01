@@ -1,0 +1,32 @@
+.container {
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  position: relative;
+}
+.contactText {
+  margin: 0;
+}
+.contactContainer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+.contactBtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #cfc7c7;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contactBtn:hover {
+  background-color: #c82333;
+}
