@@ -1,9 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectVisibleContacts } from "../../redux/contactsSlice";
+import { selectVisibleContacts } from "../../redux/contacts/slice";
 import { useEffect } from "react";
-import { fetchContacts, deleteContact } from "../../redux/contactsOps";
+import {
+  apiGetContacts,
+  apiDeleteContact,
+} from "../../redux/contacts/operations";
 import Contact from "../Contact/Contact";
-import css from "./ContactList.module.css";
+import styles from "./ContactList.module.css";
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -12,11 +15,11 @@ const ContactList = () => {
   const error = useSelector((state) => state.contacts.error);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(apiGetContacts());
   }, [dispatch]);
 
   return (
-    <ul className={css.list}>
+    <ul className={styles.list}>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       {!loading &&
@@ -27,7 +30,7 @@ const ContactList = () => {
             id={contact.id}
             name={contact.name}
             number={contact.number}
-            onDelete={() => dispatch(deleteContact(contact.id))}
+            onDelete={() => dispatch(apiDeleteContact(contact.id))}
           />
         ))}
     </ul>

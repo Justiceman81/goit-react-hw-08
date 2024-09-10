@@ -1,11 +1,11 @@
-.container {
+.containerMain {
   text-align: left;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #004e4e;
   position: relative;
+  width: 400px;
 }
 .contactText {
   margin: 0;

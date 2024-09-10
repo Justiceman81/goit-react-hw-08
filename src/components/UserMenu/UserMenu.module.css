@@ -1,0 +1,36 @@
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+
+.userName {
+  min-width: 120px;
+  font-weight: bold;
+  font-size: var(--font-medium);
+  color: var(--color-light);
+}
+
+.logoutButton {
+  min-width: 120px;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  font-size: var(--font-medium);
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  transition-property: color, background-color, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: var(--animation-cubicBezier);
+
+  transform: scale(0.9);
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+}

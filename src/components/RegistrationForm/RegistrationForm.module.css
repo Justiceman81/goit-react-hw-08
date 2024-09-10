@@ -2,24 +2,22 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 25px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
   background-color: #171717;
+  border-radius: 25px;
   transition: 0.4s ease-in-out;
 }
 .card {
-  max-width: 440px;
   background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
   border-radius: 22px;
-  transition: all 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .card2 {
-  max-width: 440px;
   border-radius: 0;
-  transition: all 0.2s;
+  transition: 0.3s ease-in-out;
 }
 
 .card2:hover {
@@ -29,6 +27,12 @@
 
 .card:hover {
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+.title {
+  text-align: center;
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
 }
 .field {
   display: flex;
@@ -43,27 +47,26 @@
   background-color: #171717;
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
-.addBtn {
-  width: 200px;
-  margin: 0 auto;
-  padding: 10px;
-  border-radius: 5px;
+
+.inputField {
+  background: none;
   border: none;
   outline: none;
-  transition: 0.4s ease-in-out;
-  background-color: #252525;
-  color: white;
+  width: 100%;
+  color: #d3d3d3;
 }
-.addBtn:hover {
+.submit {
+  background-color: #252525;
+  color: #fff;
+  margin: 2em;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.submit:hover {
   background-color: black;
   color: white;
-}
-.inputTitle {
-  color: white;
-  font-size: 16px;
-  text-align: left;
-}
-.error {
-  color: red;
-  font-size: 12px;
 }

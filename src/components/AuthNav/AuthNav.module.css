@@ -1,0 +1,22 @@
+.authNav {
+  display: flex;
+  gap: 16px;
+}
+.link {
+  min-width: 80px;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  font-size: var(--font-medium);
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  transition-property: color, background-color, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: var(--animation-cubicBezier);
+
+  transform: scale(0.9);
+}
