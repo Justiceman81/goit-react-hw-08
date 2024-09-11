@@ -5,6 +5,7 @@ import {
   apiGetContacts,
 } from "./operations";
 import { selectNameFilter } from "../filters/selectors";
+import { apiLogout } from "../auth/operations";
 
 const INITIAL_STATE = {
   contacts: [],
@@ -58,6 +59,11 @@ const contactsSlice = createSlice({
       .addCase(apiDeleteContact.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+      .addCase(apiLogout.fulfilled, (state) => {
+        state.contacts = [];
+        state.isLoading = false;
+        state.error = null;
       }),
 });
 
